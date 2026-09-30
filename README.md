@@ -1,29 +1,18 @@
-# Respiratory aging–extracellular vesicle evidence map: reproducibility repository
-
+Respiratory aging–extracellular vesicle evidence map: reproducibility repository
 This repository provides the code and derived data supporting the manuscript:
-
-**“Cellular Senescence and Chronological Aging in Respiratory Extracellular Vesicle Biology: Mapping the Mechanistic Gap”**
-
-prepared for submission to *Ageing Research Reviews*.
-
+“Cellular Senescence and Chronological Aging in Respiratory Extracellular Vesicle Biology: Mapping the Mechanistic Gap”
+prepared for submission to Ageing Research Reviews.
 The repository supports reproducibility of the manuscript-level counts and figure-level analytical outputs using public derived data. Raw bibliographic exports, abstract text, the ASReview project database, SPECTER2 raw inputs/embeddings, journal Supplementary material, and internal QC/provenance archives are intentionally excluded.
-
-## Scope
-
+Scope
 The repository reproduces and validates the manuscript-locked analysis outputs:
-
-- final included studies: **37**
-- full-text outcomes: **37 included / 13 excluded / 1 report not retrieved**
-- Figure 3: **14,366 / 12,913 / 1,453 / 767 / 52 / 12,146**
-- residual audit: **Top 50 = 50; additional relevant = 0**
-- Figure 5C: **6 criteria**
-- causal cargo: **senescence-only 12/26; chronological-aging-only 2/9**
-
+- final included studies: 37
+- full-text outcomes: 37 included / 13 excluded / 1 report not retrieved
+- Figure 3: 14,366 / 12,913 / 1,453 / 767 / 52 / 12,146
+- residual audit: Top 50 = 50; additional relevant = 0
+- Figure 5C: 6 criteria
+- causal cargo: senescence-only 12/26; chronological-aging-only 2/9
 The repository is designed to reproduce the locked counts and figure-level derived outputs. It does not rerun database retrieval, ASReview active learning, abstract-recovery APIs, SPECTER2 encoding, or embedding generation from the original bibliographic records.
-
-## Repository structure
-
-```text
+Repository structure
 respiratory-aging-ev-evidence-map/
 ├── README.md
 ├── VALIDATION_REPORT.md
@@ -71,12 +60,10 @@ The Figure 5C script reproduces the six evidence criteria comparing:
 - chronological-aging-only studies (n = 9)
 - senescence-only studies (n = 26)
 Mixed studies are not included in this between-group comparison.
-
 Installation
 python -m pip install -r requirements.txt
 
 requirements-optional.txt contains optional dependencies and is not required for the mandatory validation workflow.
-
 Execution
 The notebooks resolve the repository root automatically and use repository-relative inputs.
 jupyter nbconvert --to notebook --execute code/Figure1/Figure1_CorpusConstruction_FrozenMapping_CLEAN.ipynb --output /tmp/F1_1.ipynb
@@ -92,9 +79,7 @@ Public-data design
 Only derived analysis variables needed for reproducibility are included.
 The repository deliberately excludes bibliographic titles, abstracts, DOI/PMID fields, author and journal fields, raw source-database exports, .asreview project files, SPECTER2 raw inputs/embedding archives, and journal Supplementary Tables/Appendices.
 See VALIDATION_REPORT.md for the execution results used to validate the public release.
-
 Manuscript
 Title: Cellular Senescence and Chronological Aging in Respiratory Extracellular Vesicle Biology: Mapping the Mechanistic Gap
 Journal: Ageing Research Reviews
-Status: Manuscript in preparation / submission
-The repository citation and publication DOI will be updated after publication.
+Status: Manuscript in preparation
