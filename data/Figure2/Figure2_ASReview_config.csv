@@ -1,0 +1,25 @@
+﻿Parameter,Value
+ASReview LAB version,3.0.8
+Project ID,respiratory_aging_ev_primary_12913_v2
+Model name,elas_u4
+Querier,max
+Classifier,svm
+Balancer,balanced
+Feature extractor,tfidf
+n_query,1
+Stopper,None
+Classifier loss,squared_hinge
+Classifier C,0.11
+Balancer ratio,9.8
+TF-IDF ngram_range,"[1, 2]"
+TF-IDF sublinear_tf,True
+TF-IDF min_df,1
+TF-IDF max_df,0.95
+Automatic stopping,None
+Human-screened decisions,765
+Human-screened Relevant,50
+Human-screened Not relevant,715
+Positive seed priors,2
+Last human-screened Relevant position,408
+Terminal consecutive Not relevant,357
+Operational stopping-assessment trigger,">=250 consecutive Not relevant; formalized during early screening and fixed thereafter; trigger for assessment, not automatic stopper"

@@ -1,0 +1,2 @@
+# Optional interactive environment only; not required for mandatory validation.
+jupyterlab>=4,<5

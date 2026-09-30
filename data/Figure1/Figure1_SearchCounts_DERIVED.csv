@@ -1,0 +1,9 @@
+Metric,Count
+PubMed_raw,7447
+Scopus_raw,11248
+Web_of_Science_raw,9073
+Raw_total,27768
+Deduplicated_master,14366
+Duplicates_removed,13402
+Title_abstract,12913
+Title_only,1453

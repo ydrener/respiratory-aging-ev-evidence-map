@@ -1,0 +1,38 @@
+Study_no,Aging_framework,Functional_EV_experiment,In_vivo_evidence,Direct_EV_linked_immune_inflammatory_effect,Specific_cargo_evidence,Functionally_supported_cargo,EV_context_causal_cargo
+1,Chronological-aging only,Yes,Yes,Yes,Yes,Yes,Yes
+2,Chronological-aging only,Yes,Yes,Yes,Yes,No,No
+3,Chronological-aging only,Yes,Yes,Yes,Yes,No,No
+4,Chronological-aging only,Yes,Yes,Yes,Yes,Yes,Yes
+5,Chronological-aging only,Yes,Yes,Yes,Yes,No,No
+6,Chronological-aging only,Yes,Yes,Yes,No,No,No
+7,Chronological-aging only,Yes,Yes,Yes,No,No,No
+8,Chronological-aging only,Yes,Yes,No,Yes,Yes,No
+9,Chronological-aging only,Yes,Yes,Yes,No,No,No
+10,Senescence only,No,Yes,No,Yes,No,No
+11,Senescence only,Yes,No,No,Yes,Yes,Yes
+12,Senescence only,Yes,No,No,Yes,Yes,No
+13,Senescence only,Yes,Yes,No,Yes,Yes,No
+14,Senescence only,Yes,Yes,Yes,Yes,Yes,Yes
+15,Senescence only,Yes,Yes,Yes,Yes,Yes,No
+16,Senescence only,Yes,Yes,No,No,No,No
+17,Senescence only,No,Yes,Yes,Yes,No,No
+18,Senescence only,No,No,No,Yes,No,No
+19,Senescence only,Yes,No,Yes,Yes,No,No
+20,Senescence only,No,No,No,Yes,No,No
+21,Senescence only,Yes,No,No,Yes,Yes,Yes
+22,Senescence only,Yes,Yes,Yes,Yes,Yes,Yes
+23,Senescence only,Yes,Yes,No,Yes,Yes,Yes
+24,Senescence only,Yes,No,No,Yes,Yes,No
+25,Senescence only,Yes,Yes,Yes,Yes,Yes,No
+26,Senescence only,Yes,Yes,No,Yes,No,No
+27,Senescence only,Yes,No,No,Yes,Yes,Yes
+28,Senescence only,Yes,Yes,Yes,Yes,Yes,Yes
+29,Senescence only,Yes,Yes,No,Yes,Yes,Yes
+30,Senescence only,Yes,Yes,Yes,Yes,Yes,Yes
+31,Senescence only,Yes,Yes,Yes,Yes,Yes,Yes
+32,Senescence only,Yes,Yes,No,Yes,Yes,Yes
+33,Senescence only,Yes,Yes,Yes,Yes,Yes,Yes
+34,Senescence only,Yes,No,Yes,Yes,Yes,No
+35,Senescence only,Yes,No,No,No,No,No
+36,Mixed chronological aging + senescence,Yes,Yes,No,Yes,Yes,No
+37,Mixed chronological aging + senescence,No,No,No,Yes,No,No
