@@ -1,10 +1,16 @@
-# Respiratory aging–extracellular vesicle evidence map: public reproducibility package
+# Respiratory aging–extracellular vesicle evidence map: reproducibility repository
 
-This is the **SLIM public GitHub package** supporting figure-level reproducibility for the Ageing Research Reviews manuscript. It is derived from the validated master reproducibility archive, but intentionally excludes raw bibliographic exports, abstract text, the ASReview project database, SPECTER2 raw inputs/embeddings, journal Supplementary material, and internal QC/provenance archives.
+This repository provides the code and derived data supporting the manuscript:
+
+**“Cellular Senescence and Chronological Aging in Respiratory Extracellular Vesicle Biology: Mapping the Mechanistic Gap”**
+
+prepared for submission to *Ageing Research Reviews*.
+
+The repository supports reproducibility of the manuscript-level counts and figure-level analytical outputs using public derived data. Raw bibliographic exports, abstract text, the ASReview project database, SPECTER2 raw inputs/embeddings, journal Supplementary material, and internal QC/provenance archives are intentionally excluded.
 
 ## Scope
 
-The repository reproduces and validates the manuscript-locked analysis outputs from public derived tables only:
+The repository reproduces and validates the manuscript-locked analysis outputs:
 
 - final included studies: **37**
 - full-text outcomes: **37 included / 13 excluded / 1 report not retrieved**
@@ -13,7 +19,7 @@ The repository reproduces and validates the manuscript-locked analysis outputs f
 - Figure 5C: **6 criteria**
 - causal cargo: **senescence-only 12/26; chronological-aging-only 2/9**
 
-This SLIM repository is designed to reproduce the **locked counts and figure-level derived outputs**, not to redistribute database-derived bibliographic text or rerun SPECTER2/ASReview from proprietary/raw source records.
+The repository is designed to reproduce the locked counts and figure-level derived outputs. It does not rerun database retrieval, ASReview active learning, abstract-recovery APIs, SPECTER2 encoding, or embedding generation from the original bibliographic records.
 
 ## Repository structure
 
@@ -21,7 +27,6 @@ This SLIM repository is designed to reproduce the **locked counts and figure-lev
 respiratory-aging-ev-evidence-map/
 ├── README.md
 ├── VALIDATION_REPORT.md
-├── REPOSITORY_SHA256.tsv
 ├── requirements.txt
 ├── requirements-optional.txt
 ├── code/
@@ -34,21 +39,46 @@ respiratory-aging-ev-evidence-map/
     ├── Figure2/
     ├── Figure3/
     └── Figure5/
-```
 
-## Installation
+Figure-level reproducibility
+Figure 1 — Study identification and selection
+The Figure 1 notebooks validate the quantitative study-selection trail, including:
+- database and deduplication counts
+- 14,366-record deduplicated corpus
+- title+abstract and title-only lanes
+- title-only abstract-recovery and safety checks
+- full-text outcomes
+- duplicate-report consolidation
+Figure 2 — ASReview screening dynamics
+The Figure 2 notebook reconstructs the derived screening trajectory and validates:
+- 765 human screening decisions
+- 50 Relevant and 715 Not relevant decisions
+- 2 positive seeds
+- 767 total labeled records
+- 52 records advanced as candidates
+- terminal screening run after the final Relevant record
+Figure 3 — Semantic mapping and residual audit
+The Figure 3 notebook validates the derived data underlying:
+- the 14,366-record semantic map
+- six-cluster solution
+- 52 candidate records
+- 12,146-record residual pool
+- Top-50 residual audit
+- zero additional Relevant records
+The public repository uses frozen derived variables rather than redistributing the original SPECTER2 embeddings or bibliographic source text.
+Figure 5C — Evidence-profile comparison
+The Figure 5C script reproduces the six evidence criteria comparing:
+- chronological-aging-only studies (n = 9)
+- senescence-only studies (n = 26)
+Mixed studies are not included in this between-group comparison.
 
-```bash
+Installation
 python -m pip install -r requirements.txt
-```
 
-`requirements-optional.txt` contains only optional interactive tooling and is not required for validation.
+requirements-optional.txt contains optional dependencies and is not required for the mandatory validation workflow.
 
-## Execution
-
-Run notebooks from anywhere inside the cloned repository; they resolve the repository root automatically and use repository-relative inputs only.
-
-```bash
+Execution
+The notebooks resolve the repository root automatically and use repository-relative inputs.
 jupyter nbconvert --to notebook --execute code/Figure1/Figure1_CorpusConstruction_FrozenMapping_CLEAN.ipynb --output /tmp/F1_1.ipynb
 jupyter nbconvert --to notebook --execute code/Figure1/Figure1_Deduplication_Rules_Reconstructed_REFERENCE.ipynb --output /tmp/F1_2.ipynb
 jupyter nbconvert --to notebook --execute code/Figure1/Figure1_Selection_Reproducible_FINAL.ipynb --output /tmp/F1_3.ipynb
@@ -57,10 +87,14 @@ jupyter nbconvert --to notebook --execute code/Figure1/Figure1_TitleOnly_SafetyL
 jupyter nbconvert --to notebook --execute code/Figure2/Figure2_ASReview_Reproducible_CLEAN.ipynb --output /tmp/F2.ipynb
 jupyter nbconvert --to notebook --execute code/Figure3/Figure3_SPECTER2_Reproducible_CLEAN.ipynb --output /tmp/F3.ipynb
 python code/Figure5/Figure5C_EvidenceProfiles_FINAL.py
-```
 
-## Public-data design
+Public-data design
+Only derived analysis variables needed for reproducibility are included.
+The repository deliberately excludes bibliographic titles, abstracts, DOI/PMID fields, author and journal fields, raw source-database exports, .asreview project files, SPECTER2 raw inputs/embedding archives, and journal Supplementary Tables/Appendices.
+See VALIDATION_REPORT.md for the execution results used to validate the public release.
 
-Only derived analysis variables needed for reproducibility are included. Bibliographic titles, abstracts, DOI/PMID fields, author/journal fields, raw source database exports, `.asreview` files, SPECTER2 input/embedding archives, and journal Supplementary Tables/Appendices are deliberately excluded.
-
-See `VALIDATION_REPORT.md` for the actual execution results used to validate this release.
+Manuscript
+Title: Cellular Senescence and Chronological Aging in Respiratory Extracellular Vesicle Biology: Mapping the Mechanistic Gap
+Journal: Ageing Research Reviews
+Status: Manuscript in preparation / submission
+The repository citation and publication DOI will be updated after publication.
